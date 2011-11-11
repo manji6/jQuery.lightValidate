@@ -1,0 +1,72 @@
+jQuery.lightValidateは「単純にバリデーション処理だけして欲しい。HTMLの描画とかそういう処理は自分で全部書くから！」という人向けの、【ゆりかごから墓場まで】思想をぶった斬るjQueryライブラリです。
+当ライブラリの特徴は以下となります。
+
+【特徴】
+・大したことしないのにjQueryが必要
+・入力に対するリアルタイムバリデート処理は行わない
+・エラー時の処理は自分で書く必要がある
+・まだライブラリが未完成
+
+【使い方】
+
+1. jQuery本体のロード後に当ライブラリを読み込んでください。
+
+<script type="text/javascript" src="./jQuery.lightValidate.min.js"></script>
+
+
+2. チェックする項目をobject型で定義します。
+
+var lightValidateCond = {[
+	{
+		element: "input[name=username]",
+		type   : "require"
+	},{
+		element: "input[name=type]",
+		type   : ["require","group"],
+		group  : ["user","administrator"]
+	},{
+		element: "input[name=date]",
+		type   : ["require","regex"],
+		regex  : /^[1-9]{1}[0-9]{3}[\/-\.]+[0-1]+[0-9]{1}[\/-\.]+[0-3]+[0-9]{1}$/
+	}
+]};
+
+
+3. 何かチェックするタイミングのイベント時に先ほど定義したチェック項目Objectを引数としてmethodを実行する
+
+// 例えば#check要素をクリックした時に実行する場合・・・
+(function(){
+
+	$("#check").click(function(){
+
+		// var lightValidateCond はここに定義してあるとする
+
+		$.lightValidate(lightValidateCond,function(errorObject){
+			// エラー時はここが実行される。
+			// errorObject = {[
+				{
+					"element": "対象エラーエレメント文字列(上の定義と同じ)",
+					"message": "エラー文章"
+				}
+			]}
+		});
+
+	});
+})();
+
+
+【おまけ】
+1つの要素単位で実行することも可能です。その場合は・・・
+
+$("チェックするエレメント").lightValidate(
+	{type: "require"},function(errorObject){
+		// エラー時はココが実行される
+	}
+);
+
+こんな感じ。
+
+
+【ライセンスとか】
+・当jQuery Library はMITライセンスにて供与されます。
+・何か不具合などあれば、改修ソースをpull requestしてくれると嬉しいですが、普通にTwitter:@manji6 などに送っていただいてもOKです。
