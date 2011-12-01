@@ -41,7 +41,7 @@ var lightValidateCond = {[
 
 		// var lightValidateCond はここに定義してあるとする
 
-		$.lightValidate(lightValidateCond,function(errorObject){
+		if($.lightValidate(lightValidateCond,function(errorObject){
 			// エラー時はここが実行される。
 			// errorObject = {[
 				{
@@ -49,7 +49,10 @@ var lightValidateCond = {[
 					"message": "エラー文章"
 				}
 			]}
-		});
+		}) === false){
+			// バリデーションエラー処理後の対応をココに
+			return false;
+		};
 
 	});
 })();
