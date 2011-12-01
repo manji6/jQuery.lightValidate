@@ -30,7 +30,7 @@
 			var $target_elem = jQuery(condition[i].element);
 
 			// 対象要素自体が無い場合は処理を飛ばす
-			if($target_elem.size === 0){
+			if($target_elem.size() === 0){
 				continue;
 			}
 
