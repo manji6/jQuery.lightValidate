@@ -1,7 +1,7 @@
 /**
  * jQuery.lightValidate
  *
- * 
+ *
  * @author Ryosuke Sawada a.k.a "manji6" <ryosuke.sawada@gmail.com>
  * @requires jQuery
  * @license MIT License
@@ -64,6 +64,36 @@
 								reason: "regex"
 							});
 							continue condition_loop;
+						}
+						break;
+					// 文字数(length:{min:xx,max:xx})
+					case "length":
+						if("length" in condition[i]){
+
+							// 最小文字数
+							if("min" in condition[i].length){
+								if($target_elem.val().length < condition[i].length.min){
+									error_data.push({
+										element: condition[i].element,
+										name: (condition[i].name)? condition[i].name : null,
+										reason: "length_min"
+									});
+									continue condition_loop;
+								}
+							}
+
+							// 最大文字数
+							if("max" in condition[i].length){
+								if($target_elem.val().length > condition[i].length.max){
+									error_data.push({
+										element: condition[i].element,
+										name: (condition[i].name)? condition[i].name : null,
+										reason: "length_max"
+									});
+									continue condition_loop;
+								}
+							}
+
 						}
 						break;
 

@@ -1,20 +1,20 @@
-jQuery.lightValidate‚Íu’Pƒ‚ÉƒoƒŠƒf[ƒVƒ‡ƒ“ˆ—‚¾‚¯‚µ‚Ä—~‚µ‚¢BHTML‚Ì•`‰æ‚Æ‚©‚»‚¤‚¢‚¤ˆ—‚ÍŽ©•ª‚Å‘S•”‘‚­‚©‚çIv‚Æ‚¢‚¤lŒü‚¯‚ÌAy‚ä‚è‚©‚²‚©‚ç•æê‚Ü‚ÅzŽv‘z‚ð‚Ô‚Á‚½Ža‚éjQueryƒ‰ƒCƒuƒ‰ƒŠ‚Å‚·B
-“–ƒ‰ƒCƒuƒ‰ƒŠ‚Ì“Á’¥‚ÍˆÈ‰º‚Æ‚È‚è‚Ü‚·B
+ï»¿jQuery.lightValidateã¯ã€Œå˜ç´”ã«ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³å‡¦ç†ã ã‘ã—ã¦æ¬²ã—ã„ã€‚HTMLã®æç”»ã¨ã‹ãã†ã„ã†å‡¦ç†ã¯è‡ªåˆ†ã§å…¨éƒ¨æ›¸ãã‹ã‚‰ï¼ã€ã¨ã„ã†äººå‘ã‘ã®ã€ã€ã‚†ã‚Šã‹ã”ã‹ã‚‰å¢“å ´ã¾ã§ã€‘æ€æƒ³ã‚’ã¶ã£ãŸæ–¬ã‚‹jQueryãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚
+å½“ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ç‰¹å¾´ã¯ä»¥ä¸‹ã¨ãªã‚Šã¾ã™ã€‚
 
-y“Á’¥z
-E‘å‚µ‚½‚±‚Æ‚µ‚È‚¢‚Ì‚ÉjQuery‚ª•K—v
-E“ü—Í‚É‘Î‚·‚éƒŠƒAƒ‹ƒ^ƒCƒ€ƒoƒŠƒf[ƒgˆ—‚Ís‚í‚È‚¢
-EƒGƒ‰[Žž‚Ìˆ—‚ÍŽ©•ª‚Å‘‚­•K—v‚ª‚ ‚é
-E‚Ü‚¾ƒ‰ƒCƒuƒ‰ƒŠ‚ª–¢Š®¬
+ã€ç‰¹å¾´ã€‘
+ãƒ»å¤§ã—ãŸã“ã¨ã—ãªã„ã®ã«jQueryãŒå¿…è¦
+ãƒ»å…¥åŠ›ã«å¯¾ã™ã‚‹ãƒªã‚¢ãƒ«ã‚¿ã‚¤ãƒ ãƒãƒªãƒ‡ãƒ¼ãƒˆå‡¦ç†ã¯è¡Œã‚ãªã„
+ãƒ»ã‚¨ãƒ©ãƒ¼æ™‚ã®å‡¦ç†ã¯è‡ªåˆ†ã§æ›¸ãå¿…è¦ãŒã‚ã‚‹
+ãƒ»ã¾ã ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãŒæœªå®Œæˆ
 
-yŽg‚¢•ûz
+ã€ä½¿ã„æ–¹ã€‘
 
-1. jQuery–{‘Ì‚Ìƒ[ƒhŒã‚É“–ƒ‰ƒCƒuƒ‰ƒŠ‚ð“Ç‚Ýž‚ñ‚Å‚­‚¾‚³‚¢B
+1. jQueryæœ¬ä½“ã®ãƒ­ãƒ¼ãƒ‰å¾Œã«å½“ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’èª­ã¿è¾¼ã‚“ã§ãã ã•ã„ã€‚
 
 <script type="text/javascript" src="./jQuery.lightValidate.min.js"></script>
 
 
-2. ƒ`ƒFƒbƒN‚·‚é€–Ú‚ðobjectŒ^‚Å’è‹`‚µ‚Ü‚·B
+2. ãƒã‚§ãƒƒã‚¯ã™ã‚‹é …ç›®ã‚’objectåž‹ã§å®šç¾©ã—ã¾ã™ã€‚
 
 var lightValidateCond = {[
 	{
@@ -32,25 +32,25 @@ var lightValidateCond = {[
 ]};
 
 
-3. ‰½‚©ƒ`ƒFƒbƒN‚·‚éƒ^ƒCƒ~ƒ“ƒO‚ÌƒCƒxƒ“ƒgŽž‚Éæ‚Ù‚Ç’è‹`‚µ‚½ƒ`ƒFƒbƒN€–ÚObject‚ðˆø”‚Æ‚µ‚Ämethod‚ðŽÀs‚·‚é
+3. ä½•ã‹ãƒã‚§ãƒƒã‚¯ã™ã‚‹ã‚¿ã‚¤ãƒŸãƒ³ã‚°ã®ã‚¤ãƒ™ãƒ³ãƒˆæ™‚ã«å…ˆã»ã©å®šç¾©ã—ãŸãƒã‚§ãƒƒã‚¯é …ç›®Objectã‚’å¼•æ•°ã¨ã—ã¦methodã‚’å®Ÿè¡Œã™ã‚‹
 
-// —á‚¦‚Î#check—v‘f‚ðƒNƒŠƒbƒN‚µ‚½Žž‚ÉŽÀs‚·‚éê‡EEE
+// ä¾‹ãˆã°#checkè¦ç´ ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ãŸæ™‚ã«å®Ÿè¡Œã™ã‚‹å ´åˆãƒ»ãƒ»ãƒ»
 (function(){
 
 	$("#check").click(function(){
 
-		// var lightValidateCond ‚Í‚±‚±‚É’è‹`‚µ‚Ä‚ ‚é‚Æ‚·‚é
+		// var lightValidateCond ã¯ã“ã“ã«å®šç¾©ã—ã¦ã‚ã‚‹ã¨ã™ã‚‹
 
 		if($.lightValidate(lightValidateCond,function(errorObject){
-			// ƒGƒ‰[Žž‚Í‚±‚±‚ªŽÀs‚³‚ê‚éB
+			// ã‚¨ãƒ©ãƒ¼æ™‚ã¯ã“ã“ãŒå®Ÿè¡Œã•ã‚Œã‚‹ã€‚
 			// errorObject = {[
 				{
-					"element": "‘ÎÛƒGƒ‰[ƒGƒŒƒƒ“ƒg•¶Žš—ñ(ã‚Ì’è‹`‚Æ“¯‚¶)",
-					"message": "ƒGƒ‰[•¶Í"
+					"element": "å¯¾è±¡ã‚¨ãƒ©ãƒ¼ã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆæ–‡å­—åˆ—(ä¸Šã®å®šç¾©ã¨åŒã˜)",
+					"message": "ã‚¨ãƒ©ãƒ¼æ–‡ç« "
 				}
 			]}
 		}) === false){
-			// ƒoƒŠƒf[ƒVƒ‡ƒ“ƒGƒ‰[ˆ—Œã‚Ì‘Î‰ž‚ðƒRƒR‚É
+			// ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼å‡¦ç†å¾Œã®å¯¾å¿œã‚’ã‚³ã‚³ã«
 			return false;
 		};
 
@@ -58,18 +58,18 @@ var lightValidateCond = {[
 })();
 
 
-y‚¨‚Ü‚¯z
-1‚Â‚Ì—v‘f’PˆÊ‚ÅŽÀs‚·‚é‚±‚Æ‚à‰Â”\‚Å‚·B‚»‚Ìê‡‚ÍEEE
+ã€ãŠã¾ã‘ã€‘
+1ã¤ã®è¦ç´ å˜ä½ã§å®Ÿè¡Œã™ã‚‹ã“ã¨ã‚‚å¯èƒ½ã§ã™ã€‚ãã®å ´åˆã¯ãƒ»ãƒ»ãƒ»
 
-$("ƒ`ƒFƒbƒN‚·‚éƒGƒŒƒƒ“ƒg").lightValidate(
+$("ãƒã‚§ãƒƒã‚¯ã™ã‚‹ã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆ").lightValidate(
 	{type: "require"},function(errorObject){
-		// ƒGƒ‰[Žž‚ÍƒRƒR‚ªŽÀs‚³‚ê‚é
+		// ã‚¨ãƒ©ãƒ¼æ™‚ã¯ã‚³ã‚³ãŒå®Ÿè¡Œã•ã‚Œã‚‹
 	}
 );
 
-‚±‚ñ‚ÈŠ´‚¶B
+ã“ã‚“ãªæ„Ÿã˜ã€‚
 
 
-yƒ‰ƒCƒZƒ“ƒX‚Æ‚©z
-E“–jQuery Library ‚ÍMITƒ‰ƒCƒZƒ“ƒX‚É‚Ä‹Ÿ—^‚³‚ê‚Ü‚·B
-E‰½‚©•s‹ï‡‚È‚Ç‚ ‚ê‚ÎA‰üCƒ\[ƒX‚ðpull request‚µ‚Ä‚­‚ê‚é‚ÆŠð‚µ‚¢‚Å‚·‚ªA•’Ê‚ÉTwitter:@manji6 ‚È‚Ç‚É‘—‚Á‚Ä‚¢‚½‚¾‚¢‚Ä‚àOK‚Å‚·B
+ã€ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¨ã‹ã€‘
+ãƒ»å½“jQuery Library ã¯MITãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«ã¦ä¾›ä¸Žã•ã‚Œã¾ã™ã€‚
+ãƒ»ä½•ã‹ä¸å…·åˆãªã©ã‚ã‚Œã°ã€æ”¹ä¿®ã‚½ãƒ¼ã‚¹ã‚’pull requestã—ã¦ãã‚Œã‚‹ã¨å¬‰ã—ã„ã§ã™ãŒã€æ™®é€šã«Twitter:@manji6 ãªã©ã«é€ã£ã¦ã„ãŸã ã„ã¦ã‚‚OKã§ã™ã€‚

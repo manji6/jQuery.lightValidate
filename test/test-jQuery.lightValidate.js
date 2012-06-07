@@ -1,11 +1,11 @@
 $(function(){
 
-	$("#type").val("");test("normal system test", function(){
+	test("normal system test", function(){
 		// change Value
 		$("#sample input[name=username]").val("manji6");
 		$("#sample input[name=date]").val("2011/12/12");
 		$("#type").val("two");
-	
+
 		// Run lightValidate
 		ok($.lightValidate([{
 			element: "#sample input[name=username]",
@@ -13,6 +13,10 @@ $(function(){
 		},{
 			element: "#sample input[name=email]",
 			type: "require"
+		},{
+			element: "#sample input[name=word]",
+			type: "length",
+			"length": {min: 1, max: 100}
 		},{
 			element: "#sample input[name=date]",
 			type: "regex",
@@ -32,7 +36,7 @@ $(function(){
 		$("#sample input[name=date]").val("2011");
 		$("#type").val("");
 
-	
+
 		// Run lightValidate
 		ok(!$.lightValidate([{
 			element: "#sample input[name=username]",
@@ -45,18 +49,22 @@ $(function(){
 			type: "regex",
 			regex: /^[1-9]{1}[0-9]{3}[\/\-\.]+[0-1]+[0-9]{1}[\/\-\.]+[0-3]+[0-9]{1}$/
 		},{
+			element: "#sample input[name=word]",
+			type: "length",
+			length: {min:1,max:2}
+		},{
 			element: "#type",
 			type: "group",
 			group: ["one","two","three"]
 		}],function(error){
 			var flg = false;
-			var expect = ["#sample input[name=username]","#sample input[name=date]","#type"];
+			var expect = ["#sample input[name=username]","#sample input[name=date]","#type","#sample input[name=word]"];
 			for(var i=0,len=error.length;i<len;i++){
 				if($.inArray(error[i].element,expect) === false){
 					flg = true;
 				}
 			}
-			ok(!flg,"abnormal system test detail ver.(each parameter)");
+			ok((expect.length === error.length && !flg),"abnormal system test detail ver.(each parameter)");
 			return false;
 		}),"abnormal system test");
 	});
