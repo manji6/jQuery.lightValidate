@@ -29,12 +29,17 @@ $(function(){
 			element: "#sample input[name=number]",
 			type: ["require","number","regex"],
 			number: {max: 1000},
-			regex: /^[^0-9]*/,
+			regex: /^[^0-9]*$/,
 			regexOption: "prohibit"
 		},{
 			element: "#sample input[name=number2]",
 			type: ["require","number"],
 			number: {min: -100, max: 0}
+		},{
+			element: "#sample input[name=word2]",
+			type: ["require","regex"],
+			regexOption: "prohibit",
+			regex: /[\$]/
 		}
 		],function(error){
 		}),"normal system test");
@@ -56,7 +61,7 @@ $(function(){
 		},{
 			element: "#sample input[name=email]",
 			type: ["require","regex"],
-			regex: /[@]/,
+			regex: /メールアドレス/,
 			regexOption: "prohibit"
 		},{
 			element: "#sample input[name=date]",
@@ -78,6 +83,11 @@ $(function(){
 			element: "#type",
 			type: "group",
 			group: ["one","two","three"]
+		},{
+			element: "#sample input[name=word2]",
+			type: ["require","regex"],
+			regexOption: "prohibit",
+			regex: /[<>']/
 		}];
 		ok(!$.lightValidate(a_validation,function(error){
 			console.log(error);

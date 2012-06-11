@@ -58,8 +58,10 @@
 					// カスタム(regex)
 					case"regex":
 
-						if("regexOption" in condition[i] && condition[i].option === "prohibit"){
-							if($target_elem.val().match(condition[i].regex) >= 1){
+						var regex_result = $target_elem.val().match(condition[i].regex);
+
+						if("regexOption" in condition[i] && condition[i].regexOption === "prohibit"){
+							if(regex_result !== null && regex_result.length >= 1){
 								error_data.push({
 									element: condition[i].element,
 									name: (condition[i].name)? condition[i].name : null,
@@ -70,7 +72,7 @@
 
 						}else{
 
-							if($target_elem.val().match(condition[i].regex) === null){
+							if(regex_result === null){
 								error_data.push({
 									element: condition[i].element,
 									name: (condition[i].name)? condition[i].name : null,
