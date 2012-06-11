@@ -56,14 +56,28 @@
 						break;
 
 					// カスタム(regex)
-					case "regex":
-						if($target_elem.val().match(condition[i].regex) === null){
-							error_data.push({
-								element: condition[i].element,
-								name: (condition[i].name)? condition[i].name : null,
-								reason: "regex"
-							});
-							continue condition_loop;
+					case"regex":
+
+						if("regexOption" in condition[i] && condition[i].option === "prohibit"){
+							if($target_elem.val().match(condition[i].regex) >= 1){
+								error_data.push({
+									element: condition[i].element,
+									name: (condition[i].name)? condition[i].name : null,
+									reason: "regex"
+								});
+								continue condition_loop;
+							}
+
+						}else{
+
+							if($target_elem.val().match(condition[i].regex) === null){
+								error_data.push({
+									element: condition[i].element,
+									name: (condition[i].name)? condition[i].name : null,
+									reason: "regex"
+								});
+								continue condition_loop;
+							}
 						}
 						break;
 					// 文字数(length:{min:xx,max:xx})

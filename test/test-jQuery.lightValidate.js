@@ -27,8 +27,10 @@ $(function(){
 			group: ["one","two","three"]
 		},{
 			element: "#sample input[name=number]",
-			type: ["require","number"],
-			number: {max: 1000}
+			type: ["require","number","regex"],
+			number: {max: 1000},
+			regex: /^[^0-9]*/,
+			regexOption: "prohibit"
 		},{
 			element: "#sample input[name=number2]",
 			type: ["require","number"],
@@ -42,7 +44,7 @@ $(function(){
 
 		// change Value
 		$("#sample input[name=username]").val("");
-		$("#sample input[name=email]").val("");
+		$("#sample input[name=email]").val("これはメールアドレスじゃない");
 		$("#sample input[name=date]").val("2011");
 		$("#type").val("");
 
@@ -53,7 +55,9 @@ $(function(){
 			type: "require"
 		},{
 			element: "#sample input[name=email]",
-			type: "require"
+			type: ["require","regex"],
+			regex: /[@]/,
+			regexOption: "prohibit"
 		},{
 			element: "#sample input[name=date]",
 			type: "regex",
