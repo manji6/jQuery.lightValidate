@@ -76,7 +76,8 @@
 									error_data.push({
 										element: condition[i].element,
 										name: (condition[i].name)? condition[i].name : null,
-										reason: "length_min"
+										reason: "length_min",
+										condition: condition[i].length
 									});
 									continue condition_loop;
 								}
@@ -88,12 +89,58 @@
 									error_data.push({
 										element: condition[i].element,
 										name: (condition[i].name)? condition[i].name : null,
-										reason: "length_max"
+										reason: "length_max",
+										condition: condition[i].length
 									});
 									continue condition_loop;
 								}
 							}
 
+						}
+						break;
+
+					// 数値の最小最大
+					case "number":
+						if("number" in condition[i]){
+
+							// 数値型で判定の取れないものは事前にErrorとして弾く
+							if(isFinite($target_elem.val()) === false){
+								error_data.push({
+									element: condition[i].element,
+									name: (condition[i].name)? condition[i].name : null,
+									reason: "number",
+									condition: 'notNumber'
+								});
+								continue condition_loop;
+							}
+
+							var target_elem_value = parseInt($target_elem.val(),10);
+
+							// 最小数
+							if("min" in condition[i].number){
+								if(target_elem_value < condition[i].number.min){
+									error_data.push({
+										element: condition[i].element,
+										name: (condition[i].name)? condition[i].name : null,
+										reason: "number_min",
+										condition: condition[i].number
+									});
+									continue condition_loop;
+								}
+							}
+
+							// 最大数
+							if("max" in condition[i].number){
+								if(target_elem_value > condition[i].number.max){
+									error_data.push({
+										element: condition[i].element,
+										name: (condition[i].name)? condition[i].name : null,
+										reason: "number_max",
+										condition: condition[i].number
+									});
+									continue condition_loop;
+								}
+							}
 						}
 						break;
 
